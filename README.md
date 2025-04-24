@@ -1,6 +1,6 @@
 # Google Drive Folder Copy & Compare Utilities
 
-Google Drive does NOT have COPY or backup function in the cloud--you have to download and then upload, an issue for large dataset.  Here is a set of robust, fault-tolerant Google Apps Scripts for copying and verifying the contents of large Google Drive directories. Designed for reliability, scalability, and recoverability — tested with over 200GB of structured data.  It is complicated mostly because google script imposes lots of limitations, such as 6 min max script run-time, etc.  Everything has to be in triggered executions and have to adjust within these limitations.
+Google Drive does not natively support recursive folder copying or large-scale backup operations. Users must manually download and re-upload files — a tedious and error-prone process for large or structured datasets. Here is a set of robust, fault-tolerant Google Apps Scripts for copying and verifying the contents of large Google Drive directories. Designed for reliability, scalability, and recoverability — tested with over 200GB of structured data.  It is complicated mostly because google script imposes lots of limitations, such as 6 min max script run-time, etc.  Everything has to be in triggered executions and have to adjust within these limitations.
 
 > ⚠️ **Not a polished product** — but production-grade in robustness and suitable for power users or automation workflows.
 
