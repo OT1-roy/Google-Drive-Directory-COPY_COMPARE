@@ -1,3 +1,35 @@
+/**
+ * Google Drive Folder Copy Utility
+ * 
+ * Description:
+ *   This Google Apps Script recursively copies the full contents of a Google Drive folder
+ *   into another location. It is robust, fault-tolerant, and designed to work with very large
+ *   folder structures, handling chunked processing and retries automatically.
+ * 
+ * Author: Roy Hua (OT1-Roy)
+ * License: MIT License
+ * Version: 1.0
+ * 
+ * Disclaimer:
+ *   This tool was developed by a non-professional programmer for personal data handling.
+ *   It prioritizes reliability and recovery over performance or elegance.
+ *   It is not officially supported, and is provided as-is, with no warranty.
+ * 
+ * Features:
+ *   - Recursively copies up to 10 levels deep in Google Drive
+ *   - Deduplicates files using name and size (optionally MD5)
+ *   - Automatically splits work into batches to avoid 6-minute limit
+ *   - Recovers from network/API errors with retries and state saving
+ *   - Sends email notifications for job progress
+ *   - Logs operations to JSON and log files
+ *   - Successfully tested with over 200GB of data and deep folder structures
+ * 
+ * Setup:
+ *   1. Go to https://script.new to create a new Apps Script project
+ *   2. Paste this script and set your SOURCE_FOLDER_ID and DESTINATION_PATH
+ *   3. Run initializeJob() manually to start
+ */
+
 Google Drive Folder Copy Utility (copy.gs)
 
 This script is a robust, fault-tolerant Google Apps Script for recursively copying the full contents of a Google Drive folder into another location, preserving structure and avoiding duplicates.
